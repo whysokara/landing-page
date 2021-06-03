@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+body,
+html {
+  font-family: "Montserrat", "sans-serif";
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f4f4f4 url("../img.jpeg");
+  background-size: cover;
+}
+
+#home-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  grid-gap: 10px;
+  grid-template-areas: ". left right .";
+  height: 100%;
+}
+
+#inner {
+  grid-area: left;
+  justify-self: center;
+  align-self: center;
+}
+
+#illustration {
+  grid-area: right;
+  justify-self: center;
+  align-self: center;
+  width: 80%;
+}
+
+img#logo {
+  width: 130px;
+  margin-bottom: 1.6em;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #535353;
+  margin-bottom: 0.2em;
+}
+
+p.subtitle {
+  font-size: 1.4em;
+  color: #858585;
+  margin-top: 0;
+}
+
+.cta {
+  padding: 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #09bbe9;
+  margin-top: 2em;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#monitor {
+  animation: monitorIn 1s ease-in-out forwards;
+}
+.crypto-icons {
+  position: absolute;
+  width: 12%;
+}
+#dash {
+  margin-top: -4%;
+  margin-left: 9%;
+  animation: chatblips 0.5s ease-in-out 2.7s forwards;
+  opacity: 0;
+  z-index: 2;
+}
+#eth {
+  margin-top: 10%;
+  margin-left: 18%;
+  animation: chatblips 0.5s ease-in-out 1.9s forwards;
+  opacity: 0;
+  z-index: 2;
+}
+#iota {
+  margin-top: 5%;
+  margin-left: -2%;
+  animation: chatblips 0.5s ease-in-out 0.8s forwards;
+  opacity: 0;
+  z-index: 2;
+}
+
+@keyframes monitorIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes chatblips {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
